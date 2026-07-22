@@ -80,4 +80,11 @@ describe("built-in Boardy theme", () => {
     assert.deepStrictEqual(theme.sleepingHitboxFiles, ["boardy-sleeping.svg", "boardy-collapsing.svg"]);
     assert.ok(theme.eyeTracking.states.includes("dozing"));
   });
+
+  it("has sweeping and carrying action states", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.deepStrictEqual(theme.states.sweeping, ["boardy-sweeping.svg"]);
+    assert.deepStrictEqual(theme.states.carrying, ["boardy-carrying.svg"]);
+  });
 });

@@ -38,7 +38,9 @@
     "yawning": ["boardy-yawning.svg"],
     "dozing": ["boardy-dozing.svg"],
     "collapsing": ["boardy-collapsing.svg"],
-    "waking": ["boardy-waking.svg"]
+    "waking": ["boardy-waking.svg"],
+    "sweeping": ["boardy-sweeping.svg"],
+    "carrying": ["boardy-carrying.svg"]
   },
   "wideHitboxFiles": ["boardy-error.svg", "boardy-notification.svg"],
   "sleepingHitboxFiles": ["boardy-sleeping.svg", "boardy-collapsing.svg"],
