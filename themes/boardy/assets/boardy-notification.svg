@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -4 52 48" width="400" height="400">
+  <defs>
+    <style>
+      .bd-ping { animation: bd-ping 1.4s ease-out infinite; }
+      @keyframes bd-ping { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(2.2); } }
+      #flap-right-js { transform-box: fill-box; transform-origin: 23px 6px; animation: bd-alert 0.6s ease-in-out infinite alternate; }
+      @keyframes bd-alert { 0% { transform: rotate(4deg); } 100% { transform: rotate(30deg); } }
+    </style>
+  </defs>
+  <ellipse id="shadow-js" cx="12" cy="39" rx="11" ry="1.8" fill="#000000" opacity="0.3"/>
+  <g id="body-js">
+    <circle class="bd-ping" cx="27" cy="0" r="1.4" fill="#a4293d"/>
+    <path id="flap-left-js" d="M1 4 L-6 -1 L-6 8 L1 11 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <path id="flap-right-js" d="M23 4 L30 -1 L30 8 L23 11 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <rect x="1" y="2" width="22" height="18" rx="1.5" fill="#d8b98a" stroke="#8a6a3f" stroke-width="0.6"/>
+    <path d="M7 2 L7 20 M12 2 L12 20 M17 2 L17 20" stroke="#c4a172" stroke-width="0.4" opacity="0.6"/>
+    <rect x="1" y="1" width="22" height="2.4" fill="#c9975a" opacity="0.9"/>
+    <g id="eyes-js" fill="#1c2a44">
+      <circle cx="8" cy="9.6" r="1.8"/>
+      <circle cx="16" cy="9.6" r="1.8"/>
+    </g>
+    <circle cx="12" cy="15.6" r="1.5" fill="#1c2a44"/>
+    <path d="M-3 20 L27 20 L32 38 L-8 38 Z" fill="#22304d"/>
+    <path d="M9 20 L15 20 L15 27 L12 30 L9 27 Z" fill="#f5f4ef"/>
+    <path d="M11 21 L13 21 L14.5 29 L12 33 L9.5 29 Z" fill="#a4293d"/>
+    <path d="M23 27 L27 25 L27 30 Z" fill="#f5f4ef"/>
+  </g>
+</svg>

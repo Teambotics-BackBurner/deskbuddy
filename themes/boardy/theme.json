@@ -30,10 +30,15 @@
     "idle": ["boardy-idle.svg"],
     "thinking": ["boardy-thinking.svg"],
     "working": ["boardy-working.svg"],
+    "juggling": ["boardy-juggling.svg"],
     "attention": ["boardy-attention.svg"],
+    "error": ["boardy-error.svg"],
+    "notification": ["boardy-notification.svg"],
     "sleeping": { "fallbackTo": "attention" }
   },
+  "wideHitboxFiles": ["boardy-error.svg", "boardy-notification.svg"],
   "hitBoxes": {
-    "default": { "x": -8, "y": -2, "w": 42, "h": 40 }
+    "default": { "x": -8, "y": -2, "w": 42, "h": 40 },
+    "wide": { "x": -10, "y": -4, "w": 46, "h": 44 }
   }
 }

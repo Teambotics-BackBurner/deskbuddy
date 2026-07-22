@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -4 52 48" width="400" height="400">
+  <defs>
+    <style>
+      #body-js { transform-box: fill-box; transform-origin: 50% 50%; animation: bd-shake 0.4s ease-in-out infinite; }
+      @keyframes bd-shake { 0%,100% { transform: translateX(0); } 50% { transform: translateX(0.6px); } }
+    </style>
+  </defs>
+  <ellipse id="shadow-js" cx="12" cy="39" rx="11" ry="1.8" fill="#000000" opacity="0.3"/>
+  <g id="body-js">
+    <path id="flap-left-js" d="M1 4 L-6 -3 L-6 6 L1 11 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <path id="flap-right-js" d="M23 4 L30 -3 L30 6 L23 11 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <rect x="1" y="2" width="22" height="18" rx="1.5" fill="#d8b98a" stroke="#8a6a3f" stroke-width="0.6"/>
+    <path d="M7 2 L7 20 M12 2 L12 20 M17 2 L17 20" stroke="#c4a172" stroke-width="0.4" opacity="0.6"/>
+    <rect x="1" y="1" width="22" height="2.4" fill="#c9975a" opacity="0.9"/>
+    <g id="eyes-js" fill="#1c2a44">
+      <circle cx="8" cy="9.6" r="2.1"/>
+      <circle cx="16" cy="9.6" r="2.1"/>
+    </g>
+    <ellipse cx="12" cy="15.5" rx="2.2" ry="2.6" fill="#1c2a44"/>
+    <path d="M-3 20 L27 20 L32 38 L-8 38 Z" fill="#22304d"/>
+    <path d="M9 20 L15 20 L15 27 L12 30 L9 27 Z" fill="#f5f4ef"/>
+    <path d="M11 21 L15 27 L12.5 33 L9.5 29 Z" fill="#a4293d"/>
+    <path d="M23 27 L27 25 L27 30 Z" fill="#f5f4ef"/>
+  </g>
+</svg>

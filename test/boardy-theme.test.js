@@ -28,6 +28,9 @@ describe("built-in Boardy theme", () => {
     assert.deepStrictEqual(theme.states.thinking, ["boardy-thinking.svg"]);
     assert.deepStrictEqual(theme.states.working, ["boardy-working.svg"]);
     assert.deepStrictEqual(theme.states.attention, ["boardy-attention.svg"]);
+    assert.deepStrictEqual(theme.states.juggling, ["boardy-juggling.svg"]);
+    assert.deepStrictEqual(theme.states.error, ["boardy-error.svg"]);
+    assert.deepStrictEqual(theme.states.notification, ["boardy-notification.svg"]);
   });
 
   it("ships every referenced production asset as sanitized SVG", () => {
@@ -55,5 +58,12 @@ describe("built-in Boardy theme", () => {
         assert.match(asset, /id="shadow-js"/, `${filename} should expose shadow-js`);
       }
     }
+  });
+
+  it("marks the wide states with a wide hitbox", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.ok(theme.hitBoxes.wide);
+    assert.deepStrictEqual(theme.wideHitboxFiles, ["boardy-error.svg", "boardy-notification.svg"]);
   });
 });
