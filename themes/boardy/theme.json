@@ -42,6 +42,15 @@
     "sweeping": ["boardy-sweeping.svg"],
     "carrying": ["boardy-carrying.svg"]
   },
+  "workingTiers": [
+    { "minSessions": 3, "file": "boardy-building.svg" },
+    { "minSessions": 2, "file": "boardy-groove.svg" },
+    { "minSessions": 1, "file": "boardy-working.svg" }
+  ],
+  "jugglingTiers": [
+    { "minSessions": 2, "file": "boardy-dizzy.svg" },
+    { "minSessions": 1, "file": "boardy-groove.svg" }
+  ],
   "wideHitboxFiles": ["boardy-error.svg", "boardy-notification.svg"],
   "sleepingHitboxFiles": ["boardy-sleeping.svg", "boardy-collapsing.svg"],
   "hitBoxes": {

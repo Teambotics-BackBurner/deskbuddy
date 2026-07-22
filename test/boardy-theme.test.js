@@ -87,4 +87,18 @@ describe("built-in Boardy theme", () => {
     assert.deepStrictEqual(theme.states.sweeping, ["boardy-sweeping.svg"]);
     assert.deepStrictEqual(theme.states.carrying, ["boardy-carrying.svg"]);
   });
+
+  it("has working and juggling tiers", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.deepStrictEqual(theme.workingTiers.map((tier) => tier.file), [
+      "boardy-building.svg",
+      "boardy-groove.svg",
+      "boardy-working.svg",
+    ]);
+    assert.deepStrictEqual(theme.jugglingTiers.map((tier) => tier.file), [
+      "boardy-dizzy.svg",
+      "boardy-groove.svg",
+    ]);
+  });
 });
