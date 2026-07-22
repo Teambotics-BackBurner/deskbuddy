@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "name": "Boardy",
+  "author": "DeskBuddy Team",
+  "version": "1.0.0",
+  "description": "Boardy, the cardboard-box-headed office mascot, brought to life as a desk pet.",
+  "viewBox": { "x": -10, "y": -4, "width": 52, "height": 48 },
+  "layout": {
+    "contentBox": { "x": -6, "y": -2, "width": 38, "height": 36 },
+    "marginBox": { "x": -10, "y": -4, "width": 46, "height": 44 },
+    "centerX": 12,
+    "baselineY": 39,
+    "visibleHeightRatio": 0.62,
+    "baselineBottomRatio": 0.05
+  },
+  "eyeTracking": {
+    "enabled": true,
+    "states": ["idle"],
+    "eyeRatioX": 0.5,
+    "eyeRatioY": 0.5,
+    "maxOffset": 2.5,
+    "bodyScale": 0.28,
+    "shadowStretch": 0.15,
+    "shadowShift": 0.3,
+    "ids": { "eyes": "eyes-js", "body": "body-js", "shadow": "shadow-js" },
+    "shadowOrigin": "12px 39px"
+  },
+  "sleepSequence": { "mode": "direct" },
+  "states": {
+    "idle": ["boardy-idle.svg"],
+    "thinking": ["boardy-thinking.svg"],
+    "working": ["boardy-working.svg"],
+    "attention": ["boardy-attention.svg"],
+    "sleeping": { "fallbackTo": "attention" }
+  },
+  "hitBoxes": {
+    "default": { "x": -8, "y": -2, "w": 42, "h": 40 }
+  }
+}
