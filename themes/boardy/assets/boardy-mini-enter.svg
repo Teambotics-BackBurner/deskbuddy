@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -2 32 32" width="200" height="200">
+  <defs>
+    <style>
+      #body-js { animation: bd-slide-in 0.5s ease-out 1; }
+      @keyframes bd-slide-in { 0% { transform: translateX(14px); opacity: 0.2; } 100% { transform: translateX(0); opacity: 1; } }
+    </style>
+  </defs>
+  <ellipse id="shadow-js" cx="12" cy="22" rx="9" ry="1.4" fill="#000000" opacity="0.3"/>
+  <g id="body-js">
+    <path d="M1 4 L-3 1 L-3 7 L1 9 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <path d="M23 4 L27 1 L27 7 L23 9 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <rect x="1" y="2" width="22" height="16" rx="1.5" fill="#d8b98a" stroke="#8a6a3f" stroke-width="0.6"/>
+    <rect x="1" y="1" width="22" height="2" fill="#c9975a" opacity="0.9"/>
+    <g id="eyes-js" fill="#1c2a44">
+      <circle cx="8" cy="9" r="1.6"/>
+      <circle cx="16" cy="9" r="1.6"/>
+    </g>
+    <path d="M8 13.5 Q12 15.5 16 13.5" stroke="#1c2a44" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -2 32 32" width="200" height="200">
+  <defs>
+    <style>
+      #flap-left-js { transform-box: fill-box; transform-origin: 1px 5px; animation: bd-mtype-left 0.5s ease-in-out infinite; }
+      #flap-right-js { transform-box: fill-box; transform-origin: 23px 5px; animation: bd-mtype-right 0.5s ease-in-out infinite 0.25s; }
+      @keyframes bd-mtype-left { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(-14deg); } }
+      @keyframes bd-mtype-right { 0%,100% { transform: rotate(2deg); } 50% { transform: rotate(14deg); } }
+    </style>
+  </defs>
+  <ellipse id="shadow-js" cx="12" cy="22" rx="9" ry="1.4" fill="#000000" opacity="0.3"/>
+  <g id="body-js">
+    <path id="flap-left-js" d="M1 4 L-3 1 L-3 7 L1 9 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <path id="flap-right-js" d="M23 4 L27 1 L27 7 L23 9 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <rect x="1" y="2" width="22" height="16" rx="1.5" fill="#d8b98a" stroke="#8a6a3f" stroke-width="0.6"/>
+    <rect x="1" y="1" width="22" height="2" fill="#c9975a" opacity="0.9"/>
+    <g id="eyes-js" fill="#1c2a44">
+      <ellipse cx="8" cy="9" rx="1.6" ry="1.0"/>
+      <ellipse cx="16" cy="9" rx="1.6" ry="1.0"/>
+    </g>
+    <path d="M9 13.8 L15 13.8" stroke="#1c2a44" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -112,4 +112,20 @@ describe("built-in Boardy theme", () => {
     assert.strictEqual(theme.reactions.annoyed.file, "boardy-react-annoyed.svg");
     assert.deepStrictEqual(theme.reactions.double.files, ["boardy-react-double.svg"]);
   });
+
+  it("supports mini mode with all required states", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.strictEqual(theme.miniMode.supported, true);
+    assert.deepStrictEqual(theme.miniMode.states["mini-idle"], ["boardy-mini-idle.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-enter"], ["boardy-mini-enter.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-peek"], ["boardy-mini-peek.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-alert"], ["boardy-mini-alert.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-happy"], ["boardy-mini-happy.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-sleep"], ["boardy-mini-sleep.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-enter-sleep"], ["boardy-mini-enter-sleep.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-crabwalk"], ["boardy-mini-hop.svg"]);
+    assert.deepStrictEqual(theme.miniMode.states["mini-working"], ["boardy-mini-working.svg"]);
+    assert.ok(theme.eyeTracking.states.includes("mini-idle"));
+  });
 });

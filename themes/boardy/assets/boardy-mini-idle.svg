@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -2 32 32" width="200" height="200">
+  <defs>
+    <style>
+      #body-js { transform-box: fill-box; transform-origin: 50% 50%; animation: bd-mbreathe 3.4s ease-in-out infinite; }
+      @keyframes bd-mbreathe { 0%,100% { transform: scale(1,1); } 50% { transform: scale(1.02,0.98); } }
+      .eye-blink { transform-box: fill-box; transform-origin: 50% 50%; animation: bd-mblink 4.5s ease-in-out infinite; }
+      @keyframes bd-mblink { 0%,90%,100% { transform: scaleY(1); } 94% { transform: scaleY(0.1); } }
+    </style>
+  </defs>
+  <ellipse id="shadow-js" cx="12" cy="22" rx="9" ry="1.4" fill="#000000" opacity="0.3"/>
+  <g id="body-js">
+    <path d="M1 4 L-3 1 L-3 7 L1 9 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <path d="M23 4 L27 1 L27 7 L23 9 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <rect x="1" y="2" width="22" height="16" rx="1.5" fill="#d8b98a" stroke="#8a6a3f" stroke-width="0.6"/>
+    <rect x="1" y="1" width="22" height="2" fill="#c9975a" opacity="0.9"/>
+    <g id="eyes-js" fill="#1c2a44">
+      <circle class="eye-blink" cx="8" cy="9" r="1.6"/>
+      <circle class="eye-blink" cx="16" cy="9" r="1.6"/>
+    </g>
+    <path d="M8 13.5 Q12 15.5 16 13.5" stroke="#1c2a44" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

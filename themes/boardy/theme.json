@@ -15,7 +15,7 @@
   },
   "eyeTracking": {
     "enabled": true,
-    "states": ["idle", "dozing"],
+    "states": ["idle", "dozing", "mini-idle"],
     "eyeRatioX": 0.5,
     "eyeRatioY": 0.5,
     "maxOffset": 2.5,
@@ -68,5 +68,21 @@
     "clickRight": { "file": "boardy-react-right.svg", "duration": 2500 },
     "annoyed": { "file": "boardy-react-annoyed.svg", "duration": 3500 },
     "double": { "files": ["boardy-react-double.svg"], "duration": 3500 }
+  },
+  "miniMode": {
+    "supported": true,
+    "offsetRatio": 0.5,
+    "viewBox": { "x": -4, "y": -2, "width": 32, "height": 32 },
+    "states": {
+      "mini-idle": ["boardy-mini-idle.svg"],
+      "mini-enter": ["boardy-mini-enter.svg"],
+      "mini-peek": ["boardy-mini-peek.svg"],
+      "mini-alert": ["boardy-mini-alert.svg"],
+      "mini-happy": ["boardy-mini-happy.svg"],
+      "mini-sleep": ["boardy-mini-sleep.svg"],
+      "mini-enter-sleep": ["boardy-mini-enter-sleep.svg"],
+      "mini-crabwalk": ["boardy-mini-hop.svg"],
+      "mini-working": ["boardy-mini-working.svg"]
+    }
   }
 }
