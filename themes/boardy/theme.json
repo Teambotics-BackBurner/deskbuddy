@@ -57,5 +57,16 @@
     "default": { "x": -8, "y": -2, "w": 42, "h": 40 },
     "wide": { "x": -10, "y": -4, "w": 46, "h": 44 },
     "sleeping": { "x": -8, "y": 2, "w": 42, "h": 32 }
+  },
+  "idleAnimations": [
+    { "file": "boardy-idle-look.svg", "duration": 6500 },
+    { "file": "boardy-idle-daydream.svg", "duration": 9000 }
+  ],
+  "reactions": {
+    "drag": { "file": "boardy-react-drag.svg" },
+    "clickLeft": { "file": "boardy-react-left.svg", "duration": 2500 },
+    "clickRight": { "file": "boardy-react-right.svg", "duration": 2500 },
+    "annoyed": { "file": "boardy-react-annoyed.svg", "duration": 3500 },
+    "double": { "files": ["boardy-react-double.svg"], "duration": 3500 }
   }
 }

@@ -101,4 +101,15 @@ describe("built-in Boardy theme", () => {
       "boardy-groove.svg",
     ]);
   });
+
+  it("has idle animations and reactions", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.strictEqual(theme.idleAnimations.length, 2);
+    assert.strictEqual(theme.reactions.drag.file, "boardy-react-drag.svg");
+    assert.strictEqual(theme.reactions.clickLeft.file, "boardy-react-left.svg");
+    assert.strictEqual(theme.reactions.clickRight.file, "boardy-react-right.svg");
+    assert.strictEqual(theme.reactions.annoyed.file, "boardy-react-annoyed.svg");
+    assert.deepStrictEqual(theme.reactions.double.files, ["boardy-react-double.svg"]);
+  });
 });
