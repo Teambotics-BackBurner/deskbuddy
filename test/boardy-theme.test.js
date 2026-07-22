@@ -128,4 +128,28 @@ describe("built-in Boardy theme", () => {
     assert.deepStrictEqual(theme.miniMode.states["mini-working"], ["boardy-mini-working.svg"]);
     assert.ok(theme.eyeTracking.states.includes("mini-idle"));
   });
+
+  it("declares the expected _capabilities set", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.deepStrictEqual(theme._capabilities, {
+      eyeTracking: true,
+      miniMode: true,
+      idleAnimations: true,
+      reactions: true,
+      workingTiers: true,
+      jugglingTiers: true,
+      idleMode: "tracked",
+      sleepMode: "full",
+      powerProfile: "standard",
+      movement: "roam",
+    });
+  });
+
+  it("has a sound configuration", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.strictEqual(theme.sounds.complete, "complete.mp3");
+    assert.strictEqual(theme.sounds.confirm, "confirm.mp3");
+  });
 });
