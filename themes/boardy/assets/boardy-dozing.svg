@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -4 52 48" width="400" height="400">
+  <defs>
+    <style>
+      #body-js { transform-box: fill-box; transform-origin: 12px 20px; animation: bd-tilt 4s ease-in-out infinite; }
+      @keyframes bd-tilt { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(4deg); } }
+    </style>
+  </defs>
+  <ellipse id="shadow-js" cx="12" cy="39" rx="11" ry="1.7" fill="#000000" opacity="0.28"/>
+  <g id="body-js">
+    <path id="flap-left-js" d="M1 5 L-6 2 L-6 10 L1 12 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <path id="flap-right-js" d="M23 5 L30 2 L30 10 L23 12 Z" fill="#c9975a" stroke="#8a6a3f" stroke-width="0.5"/>
+    <rect x="1" y="2" width="22" height="18" rx="1.5" fill="#d8b98a" stroke="#8a6a3f" stroke-width="0.6"/>
+    <path d="M7 2 L7 20 M12 2 L12 20 M17 2 L17 20" stroke="#c4a172" stroke-width="0.4" opacity="0.6"/>
+    <rect x="1" y="1" width="22" height="2.4" fill="#c9975a" opacity="0.9"/>
+    <g id="eyes-js" fill="#1c2a44">
+      <ellipse cx="8" cy="10.2" rx="1.6" ry="0.6"/>
+      <ellipse cx="16" cy="10.2" rx="1.6" ry="0.6"/>
+    </g>
+    <path d="M9.5 15.2 L14.5 15.2" stroke="#1c2a44" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M-3 20 L27 20 L32 38 L-8 38 Z" fill="#22304d"/>
+    <path d="M8.5 20 L15.5 20 L15.5 26 L12 24 L8.5 26 Z" fill="#f5f4ef"/>
+    <path d="M11 24 L13 24 L13.6 30 L12 32.5 L10.4 30 Z" fill="#a4293d"/>
+    <path d="M23 27 L27 25 L27 30 Z" fill="#f5f4ef"/>
+  </g>
+</svg>

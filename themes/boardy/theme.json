@@ -15,7 +15,7 @@
   },
   "eyeTracking": {
     "enabled": true,
-    "states": ["idle"],
+    "states": ["idle", "dozing"],
     "eyeRatioX": 0.5,
     "eyeRatioY": 0.5,
     "maxOffset": 2.5,
@@ -25,7 +25,7 @@
     "ids": { "eyes": "eyes-js", "body": "body-js", "shadow": "shadow-js" },
     "shadowOrigin": "12px 39px"
   },
-  "sleepSequence": { "mode": "direct" },
+  "sleepSequence": { "mode": "full" },
   "states": {
     "idle": ["boardy-idle.svg"],
     "thinking": ["boardy-thinking.svg"],
@@ -34,11 +34,17 @@
     "attention": ["boardy-attention.svg"],
     "error": ["boardy-error.svg"],
     "notification": ["boardy-notification.svg"],
-    "sleeping": { "fallbackTo": "attention" }
+    "sleeping": ["boardy-sleeping.svg"],
+    "yawning": ["boardy-yawning.svg"],
+    "dozing": ["boardy-dozing.svg"],
+    "collapsing": ["boardy-collapsing.svg"],
+    "waking": ["boardy-waking.svg"]
   },
   "wideHitboxFiles": ["boardy-error.svg", "boardy-notification.svg"],
+  "sleepingHitboxFiles": ["boardy-sleeping.svg", "boardy-collapsing.svg"],
   "hitBoxes": {
     "default": { "x": -8, "y": -2, "w": 42, "h": 40 },
-    "wide": { "x": -10, "y": -4, "w": 46, "h": 44 }
+    "wide": { "x": -10, "y": -4, "w": 46, "h": 44 },
+    "sleeping": { "x": -8, "y": 2, "w": 42, "h": 32 }
   }
 }

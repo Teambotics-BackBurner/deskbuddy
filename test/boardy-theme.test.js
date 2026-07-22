@@ -66,4 +66,18 @@ describe("built-in Boardy theme", () => {
     assert.ok(theme.hitBoxes.wide);
     assert.deepStrictEqual(theme.wideHitboxFiles, ["boardy-error.svg", "boardy-notification.svg"]);
   });
+
+  it("has a full sleep sequence with a dedicated sleeping hitbox", () => {
+    const theme = themeLoader.loadTheme("boardy", { strict: true });
+
+    assert.strictEqual(theme.sleepSequence.mode, "full");
+    assert.deepStrictEqual(theme.states.sleeping, ["boardy-sleeping.svg"]);
+    assert.deepStrictEqual(theme.states.yawning, ["boardy-yawning.svg"]);
+    assert.deepStrictEqual(theme.states.dozing, ["boardy-dozing.svg"]);
+    assert.deepStrictEqual(theme.states.collapsing, ["boardy-collapsing.svg"]);
+    assert.deepStrictEqual(theme.states.waking, ["boardy-waking.svg"]);
+    assert.ok(theme.hitBoxes.sleeping);
+    assert.deepStrictEqual(theme.sleepingHitboxFiles, ["boardy-sleeping.svg", "boardy-collapsing.svg"]);
+    assert.ok(theme.eyeTracking.states.includes("dozing"));
+  });
 });
