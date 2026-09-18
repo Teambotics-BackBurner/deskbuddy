@@ -1651,7 +1651,7 @@ const _tickCtx = {
   getObjRect,
   getHitRectScreen,
   getAssetPointerPayload,
-  get roam() { return _roam; },
+  get roam() { return movementController || _roam; },
 };
 const _tick = require("./tick")(_tickCtx);
 requestFastTick = (maxDelay) => _tick.scheduleSoon(maxDelay);
@@ -3815,7 +3815,7 @@ let movementEnabled = false;
 movementController = {
   setEnabled(value) {
     movementEnabled = value === true;
-    const physicsActive = movementEnabled && isPhysicsThemeActive();
+    const physicsActive = isPhysicsThemeActive();
     _roam.setEnabled(movementEnabled && !physicsActive);
     _ballPhysics.setEnabled(physicsActive);
   },
@@ -3839,6 +3839,15 @@ movementController = {
     if (isPhysicsThemeActive()) _ballPhysics.noteSessionLifecycle(payload);
   },
   syncRendererState() {
+    // Startup calls movementController.setEnabled() (below) before the
+    // render window exists, so canRun()'s window check fails and the
+    // physics loop never gets scheduled — it silently stays "enabled" but
+    // inert forever, since nothing else re-arms it. syncRendererState() is
+    // the first call guaranteed to run once the window is actually ready,
+    // so re-run setEnabled() here to retry scheduling now that canRun()
+    // can pass. Safe to call unconditionally: if the loop is already
+    // running, scheduleLoop()'s own loopTimer guard makes this a no-op.
+    this.setEnabled(movementEnabled);
     if (isPhysicsThemeActive()) {
       _ballPhysics.syncRendererState();
     } else {
